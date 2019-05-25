@@ -21,6 +21,9 @@ class IndexController extends Controller
     public function __construct()
     {
         $this->data['copyright_year'] = date('Y');
+        $this->data['rel_canonical'] =  url('/');
+        $this->data['meta_description'] = "Professional painting services, we paint interiors, exteriors, commercials, Stradas... Get A Free Estimate today, call us at 778 987 0309 or visit our contact form.";
+        $this->data['meta_keywords'] = "procorpainting, procor painting, painter, painter vancouver, interior painting, exterior painting, commercial painting, residential painting, lower maindland painter, painters, vancouver painter, professional painters, profesional painter, procor painters, procor vancouver, painters, vancouver painters, exterior painting vancouver, commercial painting vancouver, residential painting vancouver";
     }
 
     /**
@@ -32,7 +35,8 @@ class IndexController extends Controller
     public function index(Request $request)
     {
         
-        $this->data['title'] = "Procor Home";
+        $this->data['title'] = "Procor Painting - Interior & Exterior Painting  - Vancouver & Lower Mainland";
+
         $this->data['menu'] = "home";
         return view('frontend.index', $this->data);
     }
@@ -47,7 +51,7 @@ class IndexController extends Controller
     public function contact(Request $request)
     {
         $this->data['menu'] = "contact";
-        $this->data['title'] = "Procor - Contact Us"; 
+        $this->data['title'] = "Procor Painting - Contact Us"; 
 
         if ($request->isMethod('post')) {
             $validator = Validator::make($request->all(), $this->contactRules);
@@ -85,7 +89,7 @@ class IndexController extends Controller
     public function about(Request $request)
     {
         $this->data['menu'] = "about";
-        $this->data['title'] = "Procor - About Us";        
+        $this->data['title'] = "Procor Painting - About Us";        
         return view('frontend.about', $this->data);
     }
 
@@ -98,7 +102,7 @@ class IndexController extends Controller
     public function projects(Request $request)
     {
         $this->data['menu'] = "projects";
-        $this->data['title'] = "Procor - Our Projects";        
+        $this->data['title'] = "Procor Painting - Our Projects";        
         return view('frontend.projects', $this->data);
     }
 
@@ -111,7 +115,7 @@ class IndexController extends Controller
     public function services(Request $request)
     {
         $this->data['menu'] = "services";
-        $this->data['title'] = "Procor - Our Services";        
+        $this->data['title'] = "Procor Painting - Our Services";        
         return view('frontend.services', $this->data);
     }
 }

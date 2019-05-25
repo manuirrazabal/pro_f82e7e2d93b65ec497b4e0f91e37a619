@@ -1,4 +1,4 @@
-[Procor]({{ url('/') }})
+[{{ env('APP_NAME') }}]({{ env('APP_URL') }})
 
 # Hello!
 
@@ -13,4 +13,4 @@ Message
 
 
 
-© Procor. All rights reserved.
+© {{ env('APP_NAME') }}. All rights reserved.

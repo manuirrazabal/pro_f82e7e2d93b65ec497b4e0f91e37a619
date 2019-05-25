@@ -322,7 +322,7 @@
                 <table class="content" width="100%" cellpadding="0" cellspacing="0">
                     <tr>
                         <td class="header">
-                            <a href="{{ url('/') }}" style="text-decoration: none; color: #000; "><img src="{{ url('/img/procor-log-web.png') }}"><span style="padding-left:10px">Procor</span></a>
+                            <a href="{{ env('APP_URL') }}" style="text-decoration: none; color: #000; "><span style="padding-left:10px">{{  env('APP_NAME') }}</span></a>
                         </td>
                     </tr>
 
@@ -363,6 +363,9 @@
                                     </table>
                                     </td>
                                 </tr>
+                                <tr>
+                                    <td class="content-cell"><img src="{{ env('APP_URL') }}/public/img/procor-logo-web-.png" width="150"></td>
+                                </tr>
                             </table>
                         </td>
                     </tr>
@@ -372,7 +375,7 @@
                             <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="content-cell" align="center">
-                                        &copy; Procor. All rights reserved. 
+                                        &copy; {{ env('APP_NAME') }}. All rights reserved. 
                                     </td>
                                 </tr>
                             </table>

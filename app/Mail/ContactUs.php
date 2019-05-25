@@ -68,7 +68,7 @@ class ContactUs extends Mailable
     {
         return $this->view('emails.contact')
                     ->text('emails.contact_plain')
-                    ->to(env('MAIL_TO', 'manuel.irrazabalp@gmail.com'))
+                    ->to(env('MAIL_USERNAME'))
                     ->from($this->contactEmail, $this->contactName)
                     ->subject($this->subtitle);
     }

@@ -340,10 +340,10 @@
                                         <p>One of our team members will contact to you as soon as possible.</p>
                                         @endif
 
-                                        <p>Please do not reply to this email. For more information, visit <a href="{{ url('/') }}">www.procor.ca</a> or contact our Customer Service at 778 987 0309</p>
+                                        <p>Please do not reply to this email. For more information, visit <a href="{{ env('APP_URL') }}">{{ env('APP_NAME') }}</a> or contact our Customer Service at 778 987 0309</p>
 
                                          <p>Thanks for trust in our services</p>
-                                         <img src="{{ url('/img/procor-log-web.png') }}">
+                                         <img src="{{ env('APP_URL') }}/public/img/procor-logo-web-.png" width="150">
                                     </td>
                                 </tr>
                             </table>
@@ -355,7 +355,7 @@
                             <table class="footer" align="center" width="570" cellpadding="0" cellspacing="0">
                                 <tr>
                                     <td class="content-cell" align="center">
-                                        &copy; Procor. All rights reserved. 
+                                        &copy; {{ env('APP_NAME') }}. All rights reserved. 
                                     </td>
                                 </tr>
                             </table>

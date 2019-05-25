@@ -1,6 +1,7 @@
 <div class="page-header">
     <h1>Testimonials</h1>
-    <p>Read what our customers says about our directory services and products. Do you want to<br> read more? Check out another <a href="#">interesting testimonials</a>.</p>
+    <p>Read what our customers say about our services and products. 
+        <!-- Do you want to<br> read more? Check out another <a href="#">interesting testimonials</a>. --></p>
 </div><!-- /.page-header -->
 
 <div class="row">

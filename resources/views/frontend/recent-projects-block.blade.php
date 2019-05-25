@@ -1,6 +1,6 @@
 <div class="page-header">
     <h1>Our Most recent projects</h1>
-    <p>It is a long established fact that a reader will be distracted by <br />the readable content of a page when looking at its layout. Check out <a href="{{ url('/projects') }}">another projects</a>.</p>
+    <p>Do you want to check more projects? please <a href="{{ url('/projects') }}">click here</a>.</p>
 </div><!-- /.page-header -->
 <div class="cards-simple-wrapper">
     <div class="row">

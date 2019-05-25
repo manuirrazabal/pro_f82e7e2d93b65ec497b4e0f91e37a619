@@ -15,41 +15,41 @@
                     <div class="cards-simple-wrapper">
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
-                                <div class="card-simple" data-background-image="assets/img/tmp/product-2.jpg">
+                                <div class="card-simple" data-background-image="{{ url('public/img/gallery/griffin_interior_7.jpg') }}">
                                     <div class="card-simple-background">
                                         <div class="card-simple-content">
-                                            <div class="card-simple-actions">
-                                                <a href="#" class="fa fa-search"></a>
+                                            <div class="card-simple-actions detail-gallery-preview">
+                                                <a href="{{ url('public/img/gallery/griffin_interior_7.jpg') }}" class="fa fa-search"></a>
                                             </div><!-- /.card-simple-actions -->
                                         </div><!-- /.card-simple-content -->
-                                        <div class="card-simple-label">Exterior</div>
+                                        <div class="card-simple-label">Interior</div>
                                         
                                     </div><!-- /.card-simple-background -->
                                 </div><!-- /.card-simple -->
                             </div><!-- /.col-* -->
                             <div class="col-sm-6 col-md-4">
-                                <div class="card-simple" data-background-image="assets/img/tmp/product-3.jpg">
+                                <div class="card-simple" data-background-image="{{ url('public/img/gallery/gallery-1.jpg') }}">
                                     <div class="card-simple-background">
                                         <div class="card-simple-content">
-                                            <div class="card-simple-actions">
-                                                <a href="#" class="fa fa-search"></a>
+                                            <div class="card-simple-actions detail-gallery-preview">
+                                                <a href="{{ url('public/img/gallery/gallery-1.jpg') }}" class="fa fa-search"></a>
                                             </div><!-- /.card-simple-actions -->
                                         </div><!-- /.card-simple-content -->
 
-                                        <div class="card-simple-label">Interior</div>                                        
+                                        <div class="card-simple-label">Exterior</div>                                        
                                     </div><!-- /.card-simple-background -->
                                 </div><!-- /.card-simple -->
                             </div><!-- /.col-* -->
                             <div class="col-sm-6 col-md-4">
-                                <div class="card-simple" data-background-image="assets/img/tmp/product-4.jpg">
+                                <div class="card-simple" data-background-image="{{ url('public/img/gallery/griffin_interior_3.jpg') }}">
                                     <div class="card-simple-background">
                                         <div class="card-simple-content">
-                                            <div class="card-simple-actions">
-                                                <a href="#" class="fa fa-search"></a>
+                                            <div class="card-simple-actions detail-gallery-preview">
+                                                <a href="{{ url('public/img/gallery/griffin_interior_3.jpg') }}" class="fa fa-search"></a>
                                             </div><!-- /.card-simple-actions -->
                                         </div><!-- /.card-simple-content -->
 
-                                        <div class="card-simple-label">Exterior</div>
+                                        <div class="card-simple-label">Interior</div>
                                     </div><!-- /.card-simple-background -->
                                 </div><!-- /.card-simple -->
                             </div><!-- /.col-* -->
@@ -58,24 +58,39 @@
 				</div>
 				<div class="block background-white background-transparent-image fullwidth">
 					<div class="page-header">
-                        <h1>Commercial Painters</h1>
-                        <p>Procor Painting can tackle small to medium-sized commercial painting projects, both interior, and exterior. We are excellent at client communication, will stay on schedule, and promise competitive pricing. Our painters have extensive experience with painting all surfaces, including stucco, siding, brick, wood, concrete, and even metal buildings! </p>
-                        <p>
+                        <h1 class="text-left">Commercial Painters</h1>
+                        <p class="text-left">Procor Painting can tackle small to medium-sized commercial painting projects, both interior, and exterior. We are excelent at client communication, will stay on schedule, and promise competitive pricing. Our painters have extensive experience with painting all surfaces, including stucco, siding, brick, wood, concrete, and even metal buildings! 
+                        <br /><br />
                         Give visitors and employees at your facility the right impression of your business with a superior exterior and interior paint job by a professional commercial painting contractor. The color of your interior and the condition of your exterior are essential to projecting the desired image of your company. We provide both interior painting and exterior painting. Call Procor Painting today to discuss the paint products and colors that are right for your business and request a free quote.
+                        <br />
                         </p>
-                        <p>
-                        	Our commercial services include the following:
-                        	<ul>
-                        		<li>Apartment complexes and other multifamily housing facilities</li>
-                        		<li>Office buildings</li>
-                        		<li>Retail stores</li>
-                        		<li>Restaurants</li>
-                        		<li>Churches</li>
-                        		<li>Industrial properties</li>
-                        		<li>Medical office spaces</li>
-                        	</ul>
-                        </p>
+                        <h2 class="text-left"> Our commercial services include the following: </h2>
+
+                        <div class="row">
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Apartment complexes and other multifamily housing facilities</li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Office buildings </li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Retail stores</li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Restaurants</li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Churches</li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Industrial properties</li>
+                            </div>
+                            <div class="col-sm-6 col-md-3 col-lg-2">
+                                <li>Medical office spaces</li>
+                            </div>
+                        </div>
                     </div><!-- /.page-header -->
+                    @php /*
                     <div class="cards-simple-wrapper">
                         <div class="row">
                             <div class="col-sm-6 col-md-4">
@@ -119,6 +134,7 @@
                             </div><!-- /.col-* -->
                         </div><!-- /.row -->
                     </div><!-- /.cards-simple-wrapper -->
+                    */ @endphp  
 				</div>
             </div><!-- /.content -->
         </div><!-- /.container -->

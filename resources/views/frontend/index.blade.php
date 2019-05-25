@@ -29,7 +29,7 @@
                                 <div class="contact-info">
                                     <span class="contact-info-item">
                                         <i class="fa fa-at"></i>
-                                        <span>dana.procor@gmail.com </span>
+                                        <span>dana@procorpainting.ca </span>
                                     </span><!-- /.contact-info-item -->
                                     <span class="contact-info-item">
                                         <i class="fa fa-phone"></i>
@@ -55,7 +55,7 @@
 
                                 <div class="box-content">
                                     <h2>Excelent Communication</h2>
-                                    <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker</p>
+                                    <p>Always know whats happening with your project.</p>
                                 </div><!-- /.box-content -->
                             </div>
                         </div><!-- /.col-sm-4 -->
@@ -67,8 +67,8 @@
                                 </div><!-- /.box-icon -->
 
                                 <div class="box-content">
-                                    <h2>Always Improving</h2>
-                                    <p>pLetraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker</p>
+                                    <h2>Upfront Pricing</h2>
+                                    <p>We provide a detailed written estimate with no hidden fees.</p>
                                 </div><!-- /.box-content -->
                             </div>
                         </div><!-- /.col-sm-4 -->
@@ -81,7 +81,7 @@
 
                                 <div class="box-content">
                                     <h2>Flexible and Reliable</h2>
-                                    <p>Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker</p>
+                                    <p>Experience in working around your schedule.</p>
                                 </div><!-- /.box-content -->
                             </div>
                         </div><!-- /.col-sm-4 -->

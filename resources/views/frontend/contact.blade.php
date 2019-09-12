@@ -18,7 +18,7 @@
 				    	@include('frontend.messages')
 
 				        <div class="contact-form-wrapper clearfix">
-				            <form class="contact-form" method="post" action="?">
+				            <form class="contact-form" method="post" action="{{ url('/contact-us') }}">
 				            	@csrf
 			                    <div class="form-group">
 			                        <label for="contact-form-name">Name</label>

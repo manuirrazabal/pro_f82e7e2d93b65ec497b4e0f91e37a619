@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Validator;
 //use App\Helpers\MailServicesHelper;
 use Illuminate\Support\Facades\Mail;
 use Session;
+use Exception;
 
 use App\Mail\ContactUs;
 use App\Mail\NoreplyMail;
@@ -52,24 +53,31 @@ class IndexController extends Controller
     {
         $this->data['menu'] = "contact";
         $this->data['title'] = "Procor Painting - Contact Us"; 
-
+        
         if ($request->isMethod('post')) {
-            $validator = Validator::make($request->all(), $this->contactRules);
-       
-            if ($validator->fails()) {
-                return back()->withErrors($validator)->withInput();
-            }
+            
+            try {
+                
+                $validator = Validator::make($request->all(), $this->contactRules);
+                
+                if ($validator->fails()) {
+                    return back()->withErrors($validator)->withInput();
+                }
 
-            //Before Validator Check if the sum is right. 
-            if ($request->input('contactRequest') != Session::get('sum_result')) {
-                Session::flash('error', "The security answer is not correct please try again");
+                //Before Validator Check if the sum is right. 
+                if ($request->input('contactRequest') != Session::get('sum_result')) {
+                    Session::flash('error', "The security answer is not correct please try again");
+                    return back()->withInput();
+                }
+
+                Mail::send(new ContactUs($request->all()));
+                Mail::send(new NoreplyMail($request->all()));
+                return redirect()->back()->with('message', 'Form sent successfully, We will contact you shortly.');
+            
+            } catch (Exception $e) {
+                Session::flash('error', $e->getMessage());
                 return back()->withInput();
             }
-
-            Mail::send(new ContactUs($request->all()));
-            Mail::send(new NoreplyMail($request->all()));
-            return redirect()->to('/contact-us')->with('message', 'Form sent successfully, We will contact you shortly.');
-          
         }
 
         //Text box Security

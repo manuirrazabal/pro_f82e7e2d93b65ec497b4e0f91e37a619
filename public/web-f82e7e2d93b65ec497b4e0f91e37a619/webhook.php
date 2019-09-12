@@ -1,8 +1,9 @@
 <?php
 $secret = 'procor+vpemq100v1988';
+$destiny_file = '../../storage/logs/deploymentBatchTriggerTempFile.txt';
 
 try {
-    file_put_contents('../../storage/logs/deploymentBatchTriggerTempFile.txt', date('m/d/Y h:i:s a') . " - push or Pull Request merge occurred on master.\r\n", FILE_APPEND);
+    file_put_contents($destiny_file, date('m/d/Y h:i:s a') . " - Starting to develop.\r\n", FILE_APPEND);
 
     $payload = isset($_REQUEST['CONTENT']) ? $_REQUEST['CONTENT'] : null;
     if ($payload == NULL && $_SERVER['REQUEST_METHOD'] == 'POST') {
@@ -13,18 +14,11 @@ try {
     $webhook_hash = $_SERVER['HTTP_X_Hub_Signature']; // Webhook Hash sent in Header
     $local_hash = hash_hmac("hmac256", $payload, $secret);
 
-
-    // $push = $payload['push'];
-    // $new_push = $push['new'];
-    // $branch_name = $new_push["name"];
-    // $commit_hash = $new_push["target"]["hash"];
-    if($local_hash == $webhook_hash) {
-        echo "Webhook Hashes match. ";
-        // file_put_contents('../../deploymentBatchTriggerTempFile.txt', date('m/d/Y h:i:s a') . " - push or Pull Request merge ocurred on master. Commit: ".$commit_hash."\r\n", FILE_APPEND);
-        file_put_contents('../../storage/logs/deploymentBatchTriggerTempFile.txt', date('m/d/Y h:i:s a') . " - push or Pull Request merge occurred on master.\r\n", FILE_APPEND);
-        echo 'DeploymentBatchTriggerTempFile created. Ready for scheduled task.';
+    if ($local_hash == $webhook_hash) {
+        file_put_contents($destiny_file , date('m/d/Y h:i:s a') . " - push or Pull Request merge occurred on master.\r\n", FILE_APPEND);
     }
 } catch(Exception $e) {
-    echo 'Caught exception: '.$e->getMessage();
+    file_put_contents($destiny_file, date('m/d/Y h:i:s a') . 'Caught exception: '. $e->getMessage() . "\r\n", FILE_APPEND);
 }
+
 ?>
